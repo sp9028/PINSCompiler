@@ -1,0 +1,30 @@
+typ list: arr[10] integer;
+var l: integer;
+
+fun main(x: integer): integer = (
+  fill_array(10, 0),
+  print_array(a, 10),
+  0
+) { where
+  var a: list;
+  fun fill_array(l: integer, x: integer): integer = (
+    { for i = x, l, 1:
+        { a[i] = i * 2 }
+    },
+    0
+  ) { where
+    var i: integer
+  }
+};
+
+fun print_array(a: list, l:integer): integer = (
+  { for i = 0, l, 1:
+      print_int(a[i])
+  },
+  0
+) { where
+  var i: integer
+}
+
+
+
